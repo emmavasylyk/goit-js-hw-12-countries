@@ -1,5 +1,3 @@
-// import './sass/main.scss';
-
 import API from './js/fetchCountries'
 import markupCard from './templates/markup.hbs';
 import markupListCountry from './templates/markup-list-country.hbs'
@@ -56,6 +54,8 @@ const statusCountry = function (country) {
   return Promise.resolve(country)
 }
 
-function onFetchError(error) {
-  error
+function onFetchError() {
+  error({
+  title: 'We didn’t find your request!'
+  })
 }
